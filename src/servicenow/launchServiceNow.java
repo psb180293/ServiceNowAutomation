@@ -21,12 +21,11 @@ public class launchServiceNow {
 	
 	
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void startServiceNow(String url,String username,String password,String chromepath) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver","E:\\Selenium\\chromedriver_win32\\chromedriver.exe");		
+		System.setProperty("webdriver.chrome.driver",chromepath);		
 		WebDriver driver = new ChromeDriver();		
-		String url= "https://dev62656.service-now.com/";		
 		driver.get(url);		
 		driver.manage().window().maximize();		
 		WebDriverWait wait=new WebDriverWait(driver,180);			
@@ -37,7 +36,7 @@ public class launchServiceNow {
 		
 		//Step 1 to 6 :::: Log In to Service Now//	
 		Login lg = new Login();		
-		driver = lg.loginServiceNow(driver);		
+		driver = lg.loginServiceNow(driver,username,password);		
 		driver.switchTo().defaultContent();
 		
 		

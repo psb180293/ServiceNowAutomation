@@ -37,7 +37,7 @@ public class launchServiceNow_backup {
 		
 		//Log In to Service Now//		
 		Login lg = new Login();		
-		driver = lg.loginServiceNow(driver);		
+		driver = lg.loginServiceNow(driver,"user","password");		
 		driver.switchTo().defaultContent();
 		
 		
