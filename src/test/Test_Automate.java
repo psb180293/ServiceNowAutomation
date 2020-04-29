@@ -33,7 +33,7 @@ public class Test_Automate {
 		}
 		
 		try {
-		driver.findElement(By.id("pwd")).sendKeys("Apr@2020!");
+		driver.findElement(By.id("pwd")).sendKeys("xxxxxxx");
 		}
 		catch (Exception e) {
 			e.getMessage();
