@@ -15,7 +15,7 @@ public class Test_Automate {
 		// TODO Auto-generated method stub
 		System.out.println("Hello");
 		
-		String time_sheet="03/01/2020"; //mm/dd/yyyy format
+		String time_sheet="04/26/2020"; //mm/dd/yyyy format
 		
 		System.setProperty("webdriver.chrome.driver","E:\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		
@@ -24,8 +24,23 @@ public class Test_Automate {
 		driver.get("https://i3lmobile.itcinfotech.com");
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.id("userid")).sendKeys("33458");
-		driver.findElement(By.id("pwd")).sendKeys("Welcome1??");
+		try {
+		driver.findElement(By.id("userid")).sendKeys("33421");
+		}
+		catch (Exception e) {
+			e.getMessage();
+			System.exit(0);
+		}
+		
+		try {
+		driver.findElement(By.id("pwd")).sendKeys("Apr@2020!");
+		}
+		catch (Exception e) {
+			e.getMessage();
+		}
+		
+		
+		
 		driver.findElement(By.name("Submit")).click();
 		
 		WebDriverWait wait=new WebDriverWait(driver, 20);
@@ -94,7 +109,7 @@ public class Test_Automate {
 			String derived_xpath="//tr[@id='trEX_TIME_DTL$0_row1']/td["+(i+1)+"]/div/input";
 			System.out.println(derived_xpath);
 			driver.findElement(By.xpath(derived_xpath)).click();
-			driver.findElement(By.xpath(derived_xpath)).sendKeys("5.4");
+			driver.findElement(By.xpath(derived_xpath)).sendKeys("7.2");
 			
 		}
 		
@@ -103,7 +118,7 @@ public class Test_Automate {
 			
 			String derived_xpath="//tr[@id='trEX_TIME_DTL$0_row2']/td["+(i+1)+"]/div/input";
 			driver.findElement(By.xpath(derived_xpath)).click();
-			driver.findElement(By.xpath(derived_xpath)).sendKeys("3.6");
+			driver.findElement(By.xpath(derived_xpath)).sendKeys("1.8");
 			
 		}
 		
@@ -145,6 +160,8 @@ public class Test_Automate {
 		//System.out.println(driver.getPageSource());
 		
 		ok.click();
+		
+		System.out.println("Completed.....");
 		
 		
 	}
