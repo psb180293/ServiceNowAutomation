@@ -21,7 +21,7 @@ public class launchServiceNow {
 	
 	
 	
-	public static void startServiceNow(String url,String username,String password,String chromepath) throws InterruptedException {
+	public void startServiceNow(String url,String username,String password,String chromepath) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		System.setProperty("webdriver.chrome.driver",chromepath);		
