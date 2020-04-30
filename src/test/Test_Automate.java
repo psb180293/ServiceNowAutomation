@@ -14,6 +14,7 @@ public class Test_Automate {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		System.out.println("Hello");
+		System.out.println("hello");
 		
 		String time_sheet="04/26/2020"; //mm/dd/yyyy format
 		
